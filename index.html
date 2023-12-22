@@ -1,1 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+	<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <style>
+        * {
+            transition: all 0.6s;
+        }
+
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            color: rgba(0, 0, 0, 0.7);
+            background: linear-gradient(to bottom, #0A1A29, #6D6475, #C69E92);
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #content {
+            position: relative;
+            max-width: 392px;
+            width: 90%; 
+            padding: 40px 20px 40px 20px;
+            background:#ffffff1c;
+            box-shadow: 0px 0px 35px rgba(0, 0, 0, 0.6);
+        }
+
+        #content h1 {
+            font-size: 26px;
+            color: black;
+        }
+
+        #content p {
+            font-weight: 100;
+            color: white;
+            margin: 15px 0;
+            line-height: 24px;
+        }
+
+        .form-container {
+            display: flex;
+            flex-wrap: wrap; 
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        input[type='email'],
+        input[type='text'] {
+            outline: none;
+            width: calc(49% - 5px); 
+            margin-bottom: 10px; 
+            padding: 10px;
+            border: 2px solid transparent;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        input[type='email']:focus, input[type='text']:focus {
+            border: 2px solid #aaa;
+        }
+
+        label {
+            width: 100%;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        #zcWebOptin {
+            color: white;
+            text-decoration: none;
+            width: 100%;
+            padding: 16px;
+            background: #000;
+            text-align: center;
+            border: 2px solid transparent;
+            font-size: 18px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        #zcWebOptin:hover {
+            border: 2px solid #aaa;
+        }
+
+        @media screen and (max-width: 736px) {
+            input[type='email'],
+            input[type='text'] {
+                width: 100%;
+            }
+        }
+		
+		#zcOptinSuccessPopup {
+			border: 1px solid #e6e6e6;
+			box-shadow: 0 1px 10px #424242;
+			padding: 20px;
+			text-align: center;
+	    }
+
+    </style>
+</head>
+<body>
+
+<!--Zoho Campaigns Web-Optin Form Starts Here-->
+<div id="customForm">
+  <div class="quick_form_28_css" name="SIGNUP_BODY">
+    <div>
+      <div style="position:relative;">
+        <div id="Zc_SignupSuccess" style="display:none;position:absolute;margin-left:4%;width:90%;background-color: white; padding: 3px; border: 3px solid rgb(194, 225, 154); margin-top: 10px;margin-bottom:10px;word-break:break-all ">
+          <table width="100%" cellpadding="0" cellspacing="0" border="0">
+            <tbody>
+              <tr>
+                <td width="10%">
+                  <img class="successicon" src="https://vhly-zgph.maillist-manage.net/images/challangeiconenable.jpg" align="absmiddle">
+                </td>
+                <td>
+                  <span id="signupSuccessMsg" style="color: rgb(73, 140, 132); font-family: sans-serif; font-size: 14px;word-break:break-word">&nbsp;&nbsp;Thank you for Signing Up</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <form method="POST" id="zcampaignOptinForm" action="https://zcsub-cmpzourl.maillist-manage.com/weboptin.zc" target="_zcSignup">
+			<div id="content">
+				<h1>Subscribe to our newsletter</h1>
+				<p>Sign up for exclusive offers, upcoming events, compliance updates, and more.</p>
+				<div class="form-container">
+				    <input type="text" placeholder="Email" changeitem="SIGNUP_FORM_FIELD" name="CONTACT_EMAIL" id="EMBED_FORM_EMAIL_LABEL">
+				    <input type="text" placeholder="Name" changeitem="SIGNUP_FORM_FIELD" name="LASTNAME" id="EMBED_FORM_NAME_LABEL">
+				</div>
+				<label>
+					<input type="checkbox" name="subscribe"> I accept the Privacy Policy
+				</label>
+				<input type="submit" name="SIGNUP_SUBMIT_BUTTON" id="zcWebOptin" value="Subscribe">
+				
+				<input type="hidden" id="fieldBorder" value="">
+				<input type="hidden" id="submitType" name="submitType" value="optinCustomView">
+				<input type="hidden" id="emailReportId" name="emailReportId" value="">
+				<input type="hidden" id="formType" name="formType" value="QuickForm">
+				<input type="hidden" name="zx" id="cmpZuid" value="130482bc3">
+				<input type="hidden" name="zcvers" value="3.0">
+				<input type="hidden" name="oldListIds" id="allCheckedListIds" value="">
+				<input type="hidden" id="mode" name="mode" value="OptinCreateView">
+				<input type="hidden" id="zcld" name="zcld" value="1aa2a68a69345c03">
+				<input type="hidden" id="zctd" name="zctd" value="">
+				<input type="hidden" id="document_domain" value="">
+				<input type="hidden" id="zc_Url" value="vhly-zgph.maillist-manage.net">
+				<input type="hidden" id="new_optin_response_in" value="0">
+				<input type="hidden" id="duplicate_optin_response_in" value="0">
+				<input type="hidden" name="zc_trackCode" id="zc_trackCode" value="ZCFORMVIEW">
+				<input type="hidden" id="zc_formIx" name="zc_formIx" value="3z82ff00e1dcd24b54e92e5a3a8e6d92ad0536d4551f4a5e060fa280cb11793e7c">
+				<input type="hidden" id="viewFrom" value="URL_ACTION">
+				<input type="hidden" id="scriptless" name="scriptless" value="yes">
+				<input type="hidden" id="zc_spmSubmit" name="zc_spmSubmit" value="ZCSPMSUBMIT">
+		    </div>
+      </form>
+    </div>
+  </div>
+</div>
+<div id="zcOptinOverLay" oncontextmenu="return false" style="display:none;text-align: center; background-color: rgb(0, 0, 0); opacity: 0.5; z-index: 100; position: fixed; width: 100%; top: 0px; left: 0px; height: 988px;"></div>
+<div id="zcOptinSuccessPopup" style="display:none;z-index: 9999;width: 800px; height: 40%;top: 84px;position: fixed; left: 26%;background-color: #F57E20;border-color: #E6E6E6; border-style: solid; border-width: 1px; box-shadow: 0 1px 10px #424242;padding: 35px;">
+  <span style="position: absolute;top: -16px;right:-14px;z-index:99999;cursor: pointer;" id="closeSuccess">
+    <img src="https://vhly-zgph.maillist-manage.net/images/videoclose.png">
+  </span>
+  <div id="zcOptinSuccessPanel"></div>
+</div>
+
+<script>
+  $(document).ready(function() {
+    $("#zcampaignOptinForm").submit(function(e) {
+      e.preventDefault(); // Prevent the default form submission
+
+      // Perform AJAX submission
+      $.ajax({
+        type: "POST",
+        url: "https://zcsub-cmpzourl.maillist-manage.com/weboptin.zc",
+        data: $("#zcampaignOptinForm").serialize(),
+        success: function(response) {
+          // Handle the success response here
+          // You can display a success message or perform other actions
+		  console.log(response);
+          $("#zcOptinSuccessPanel").html(response);
+          $("#zcOptinSuccessPopup").show();
+		  
+		  // Reset the form fields
+		  $("#zcampaignOptinForm")[0].reset();
+        },
+        error: function(error) {
+          // Handle the error response here
+          console.error("Error submitting form:", error);
+        }
+      });
+    });
+
+    // Close success popup
+    $("#closeSuccess").click(function() {
+      $("#zcOptinSuccessPopup").hide();
+    });
+  });
+</script>
+<!--Zoho Campaigns Web-Optin Form Ends Here-->
+
+</body>
+</html>
 
